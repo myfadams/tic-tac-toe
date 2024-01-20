@@ -117,7 +117,9 @@ function hasWinningMove(winChoices, movesMade) {
 			else {
 				if (count === 0) {
 					$("h1").html("Draw, Press any key to restart");
-					hasStarted = false;
+					setTimeout(function () {
+						hasStarted = false;
+					}, 500);
 					start();
 				}
 				return false;
