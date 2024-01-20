@@ -49,8 +49,10 @@ function play() {
 					console.log(hasWinningMove(winningChoices, player_moves));
 					if (hasWinningMove(winningChoices, player_moves)) {
 						$("h1").text("You win");
-						hasStarted = false;
-						start();
+						setTimeout(function () {
+							hasStarted = false;
+							start();
+						}, 500);
 					} else setTimeout(compChoice, 800);
 				} else {
 					$("h1").text("Already Chosen, Try Again");
